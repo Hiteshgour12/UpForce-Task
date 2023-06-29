@@ -105,6 +105,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now= True)
     description = models.CharField(max_length=100)
     content = models.TextField()
+    post_image = models.ImageField(upload_to='upload/')
     liked_by = models.ManyToManyField(User, through='Like')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=200,choices=STATUS, default='private')

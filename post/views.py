@@ -58,23 +58,20 @@ class LikeUpdateView(generics.GenericAPIView):
     permission_classes = (IsAuthenticated,)
     def delete(self, request, pk, format=None):
         user = request.user
-        try:
-            if user.role == 'admin':
-                item =  Like.objects.get(pk=pk)
-                item.delete()
-                return Response({
-                    'message': 'Like Deleted Successfully'
-                })
-            else:
-                response = {
-                    # 'success': False,
-                    # 'status_code': status.HTTP_403_FORBIDDEN,
-                    'message': 'You are not authorized to perform this action'
-                }
-                return Response(response, status.HTTP_403_FORBIDDEN)
-        except:
-            return Response("Department cannot be deleted")
-
+        if user.role == 'admin':
+            item =  Like.objects.get(pk=pk)
+            item.delete()
+            return Response({
+                'message': 'Like Deleted Successfully'
+            })
+        else:
+            response = {
+                # 'success': False,
+                # 'status_code': status.HTTP_403_FORBIDDEN,
+                'message': 'You are not authorized to perform this action'
+            }
+            return Response(response, status.HTTP_403_FORBIDDEN)
+        
 class AllPostView(generics.GenericAPIView):
     serializer_class = PostSerializer
 

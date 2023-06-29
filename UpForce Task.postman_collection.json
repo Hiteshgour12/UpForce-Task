@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "fc96ecb7-38f8-48aa-879f-5ea9533d2fd0",
+		"name": "UpForce Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "user list for admin",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTMzNTE2LCJpYXQiOjE2ODc5MzM1MTYsImp0aSI6ImYyYjkzODI5YmIyNzQ3MjM4YzgyMGMwZjVjYmY5NzVhIiwidXNlcl9pZCI6MX0.t9EEyJ75nuNPjZLUilz7E6fiTGKtJtNjRVkSCn7vOtA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/userlist/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"userlist",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user By Id for admin",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTcwODkxLCJpYXQiOjE2ODc5NzA4OTEsImp0aSI6IjRmYTQ0ZTcwZDQ5ZDRkMmU4ZjQwMmM1ODVhNDM2MTQ1IiwidXNlcl9pZCI6MX0.74sCDW5FWpPoPpIuxjn69jsjy5_LkzJIgDFFUKl2cQk",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "last_login",
+											"value": "2023-06-28T16:57:55.085661Z",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/userupdate/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"userupdate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Update user By Id for admin",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTcwODkxLCJpYXQiOjE2ODc5NzA4OTEsImp0aSI6IjRmYTQ0ZTcwZDQ5ZDRkMmU4ZjQwMmM1ODVhNDM2MTQ1IiwidXNlcl9pZCI6MX0.74sCDW5FWpPoPpIuxjn69jsjy5_LkzJIgDFFUKl2cQk",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "is_active",
+											"value": "True",
+											"type": "default"
+										},
+										{
+											"key": "mobile_number",
+											"value": "8789977886",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/userupdate/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"userupdate",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update post by id for admin",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTc5Mzk4LCJpYXQiOjE2ODc5NzkzOTgsImp0aSI6ImFmYTU2MWZmMzYwNDQ1NWQ5Zjg3OWM5YTI1ZjYwNTVhIiwidXNlcl9pZCI6MX0.OxiLfeQ6Vbw7Zddnpdt_pqzTDg9G5EdRKsH-D8EdjMo",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "description",
+											"value": "test the descrption",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"item": [
+						{
+							"name": "delete user By Id for admin",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTcwODkxLCJpYXQiOjE2ODc5NzA4OTEsImp0aSI6IjRmYTQ0ZTcwZDQ5ZDRkMmU4ZjQwMmM1ODVhNDM2MTQ1IiwidXNlcl9pZCI6MX0.74sCDW5FWpPoPpIuxjn69jsjy5_LkzJIgDFFUKl2cQk",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/userupdate/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"userupdate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete post by id for admin",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTM1ODQ3LCJpYXQiOjE2ODc5MzU4NDcsImp0aSI6IjQ2OTgxNzE5YTE4OTQ3NTNiNmQ0YTcxN2U4ZDhlNzQ1IiwidXNlcl9pZCI6N30.OHLLX58XFm5TzAO1Q2-RxFJ_DJcsv9GWAbRxeD6S4EU",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/8",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Likes by admin",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTc5Mzk4LCJpYXQiOjE2ODc5NzkzOTgsImp0aSI6ImFmYTU2MWZmMzYwNDQ1NWQ5Zjg3OWM5YTI1ZjYwNTVhIiwidXNlcl9pZCI6MX0.OxiLfeQ6Vbw7Zddnpdt_pqzTDg9G5EdRKsH-D8EdjMo",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/likes/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"likes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Post/Blog",
+			"item": [
+				{
+					"name": "Get",
+					"item": [
+						{
+							"name": "Get publicc/private Blog of user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTQzMDUxLCJpYXQiOjE2ODc5NDMwNTEsImp0aSI6IjNiYjRiZGY1MTY0MTQ0MWQ5MzgzNGMxOTUxNmVhOGQwIiwidXNlcl9pZCI6MX0.NlARSKmJ6pMWl6crHy1iZRnsRMV7TwBGciPUT1NNxps",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"item": [
+						{
+							"name": "Update post by id for user",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTM1ODQ3LCJpYXQiOjE2ODc5MzU4NDcsImp0aSI6IjQ2OTgxNzE5YTE4OTQ3NTNiNmQ0YTcxN2U4ZDhlNzQ1IiwidXNlcl9pZCI6N30.OHLLX58XFm5TzAO1Q2-RxFJ_DJcsv9GWAbRxeD6S4EU",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "python1",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "second",
+											"type": "default"
+										},
+										{
+											"key": "content",
+											"value": "testxxzbcbcvbxcb fgzfgd",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "public",
+											"description": "use value as private and public",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/post/17",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"post",
+										"17"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "All Public Blog/Post",
+			"item": [
+				{
+					"name": "All Public Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/allpost/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"allpost",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "user profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTc2MzY3LCJpYXQiOjE2ODc5NzYzNjcsImp0aSI6ImY2MjYzODJlNTI4NTRjYjdhZTJhOTYxYTM3M2Y4ZTAwIiwidXNlcl9pZCI6N30.iCYp_4S2dAN9lHut_ArmNQZcmYjvxN43fQQMUQOx4Os",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTc2MzY3LCJpYXQiOjE2ODc5NzYzNjcsImp0aSI6ImY2MjYzODJlNTI4NTRjYjdhZTJhOTYxYTM3M2Y4ZTAwIiwidXNlcl9pZCI6N30.iCYp_4S2dAN9lHut_ArmNQZcmYjvxN43fQQMUQOx4Os",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "password2",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "mobile_number",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "admin@1230",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTM1ODQ3LCJpYXQiOjE2ODc5MzU4NDcsImp0aSI6IjQ2OTgxNzE5YTE4OTQ3NTNiNmQ0YTcxN2U4ZDhlNzQ1IiwidXNlcl9pZCI6N30.OHLLX58XFm5TzAO1Q2-RxFJ_DJcsv9GWAbRxeD6S4EU",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "python1",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "second",
+							"type": "default"
+						},
+						{
+							"key": "content",
+							"value": "testxxzbcbcvbxcb fgzfgd",
+							"type": "default"
+						},
+						{
+							"key": "status",
+							"value": "public",
+							"description": "use value as private and public",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Likes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTc5Mzk4LCJpYXQiOjE2ODc5NzkzOTgsImp0aSI6ImFmYTU2MWZmMzYwNDQ1NWQ5Zjg3OWM5YTI1ZjYwNTVhIiwidXNlcl9pZCI6MX0.OxiLfeQ6Vbw7Zddnpdt_pqzTDg9G5EdRKsH-D8EdjMo",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/likes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"likes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

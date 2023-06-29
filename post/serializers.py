@@ -90,13 +90,8 @@ class PostSerializer(serializers.ModelSerializer):
         queryset=User.objects.all())
     class Meta:
         model = Post
-        fields =['title','description','content','liked_by','status']
-    def update(self, instance, validated_data):
-        liked_by = validated_data.pop('liked_by')
-        for i in liked_by:
-            instance.liked_by.add(i)
-        instance.save()
-        return instance
+        fields =['title','description','post_image','content','liked_by','status']
+    
 
 class PostListSerializer(serializers.ModelSerializer):
     class Meta:
